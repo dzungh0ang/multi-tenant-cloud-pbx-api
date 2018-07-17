@@ -1,0 +1,13 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script>
+var socket = io.connect('http://localhost:3000');
+
+socket.on('connect', function(data) {
+    socket.emit('update-status',{
+        authToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhM2EyMzI2N2JiZTZkMDVkZTlkMWUzYiIsImlwIjoiOjoxIiwidXNlckFnZW50IjoiUG9zdG1hblJ1bnRpbWUvNy4xLjEiLCJpYXQiOjE1MjEzMDQwOTYsImV4cCI6MTUyMTM5MDQ5Nn0.e0N9gfjbmORh9jsOzF2tywi-4g8tCme_zaNgNzBlQCw"
+    });
+});
+socket.on('update-status', function(data) {
+    console.log(data);
+});
+</script>

@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "mtcp-api",
+            "script": "npm",
+            "args" : "start"
+        }
+    ]
+}

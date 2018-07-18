@@ -8,6 +8,11 @@ import configs from '../../configs';
 
 import userRouter from './user';
 import groupRouter from './user-group';
+import customer from './customer';
+import pbx_number from './pbx-number';
+import pbx from './pbx';
+import contact from './contact';
+import dial_plan from './dial-plan';
 import autoCall from './auto-call';
 
 
@@ -34,7 +39,6 @@ router.use(async (request, response, next) => {
     let allowPaths = [
         "/user/login"
     ];
-    console.log(request.cookies);
 
     // Website you wish to allow to connect
     response.setHeader('Access-Control-Allow-Origin', process.env.ACAO || '*');
@@ -130,6 +134,41 @@ router.get('/user-group/:id',groupRouter.findOneById);
 router.post('/user-group',groupRouter.createOne);
 router.put('/user-group/:id',groupRouter.updateOneById);
 router.delete('/user-group/:id',groupRouter.deleteById);
+
+//customer
+router.get('/customer',customer.find);
+router.get('/customer/:id',customer.findOneById);
+router.post('/customer',customer.createOne);
+router.put('/customer/:id',customer.updateOneById);
+router.delete('/customer/:id',customer.deleteById);
+
+//pbx-number
+router.get('/pbx-number',pbx_number.find);
+router.get('/pbx-number/:id',pbx_number.findOneById);
+router.post('/pbx-number',pbx_number.createOne);
+router.put('/pbx-number/:id',pbx_number.updateOneById);
+router.delete('/pbx-number/:id',pbx_number.deleteById);
+
+//pbx
+router.get('/pbx',pbx.find);
+router.get('/pbx/:id',pbx.findOneById);
+router.post('/pbx',pbx.createOne);
+router.put('/pbx/:id',pbx.updateOneById);
+router.delete('/pbx/:id',pbx.deleteById);
+
+//contact
+router.get('/contact',contact.find);
+router.get('/contact/:id',contact.findOneById);
+router.post('/contact',contact.createOne);
+router.put('/contact/:id',contact.updateOneById);
+router.delete('/contact/:id',contact.deleteById);
+
+//dial-plan
+router.get('/dial-plan',dial_plan.find);
+router.get('/dial-plan/:id',dial_plan.findOneById);
+router.post('/dial-plan',dial_plan.createOne);
+router.put('/dial-plan/:id',dial_plan.updateOneById);
+router.delete('/dial-plan/:id',dial_plan.deleteById);
 
 router.get('/auto-call',autoCall.find);
 

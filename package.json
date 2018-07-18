@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "ENV=localhost nodemon --watch ./ --exec babel-node ./server.js",
+    "start:win": "nodemon --watch ./ --exec babel-node ./server.js",
     "build": "babel src -d dist --source-maps"
   },
   "author": "Dzung Hoang",

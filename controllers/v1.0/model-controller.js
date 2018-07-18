@@ -1,6 +1,4 @@
 import DEFAULT_VALUES from "../../enums/default-values";
-import RESPONSE_CODE from "../../enums/response-code"; 
-import MODEL_NAME from "../../enums/model-name"; 
 import ERROR_CODE from "../../enums/error-code"; 
 import jsonHelper from "../../helpers/json-helper";
 import errorCodeHelper from "../../helpers/error-code-helper";
@@ -8,6 +6,11 @@ import errorCodeHelper from "../../helpers/error-code-helper";
 var models = {
     "user": require('../../models/user'),
     "user-group": require('../../models/user-group'),
+    "customer": require('../../models/customer') ,
+    "pbx-number": require('../../models/pbx-number') ,
+    "pbx": require('../../models/pbx') ,
+    "contact": require('../../models/contact') ,
+    "dial-plan": require('../../models/dial-plan') ,
 }
 
 class ModelController{

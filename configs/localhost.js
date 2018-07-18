@@ -1,5 +1,5 @@
 const config = {
-    mongodb:"mongodb://dev:fuck0ff@localhost:27017/template",
+    mongodb:"mongodb://localhost:27017/mtcp",
     jwt:{
         secret: "Lf5cy2uBDmCH4dsUbr8CPXA",
         timeout: "24h",
@@ -7,10 +7,11 @@ const config = {
     cookies:{
         timeout: "86400000",
     },
-    freeswitch:{
+    ami:{
         host: "103.63.109.46",
         port: 8021,
-        password: "1H4dsUb"
+        username: "",
+        secret: "1H4dsUb"
     }
 }
 

@@ -151,10 +151,10 @@ router.delete('/pbx-number/:number',pbx_number.deletepbxnumber);
 
 //pbx
 router.get('/pbx',pbx.find);
-router.get('/pbx/:id',pbx.findOneById);
+router.get('/pbx/:hostname',pbx.findpbx);
 router.post('/pbx',pbx.createOne);
-router.put('/pbx/:id',pbx.updateOneById);
-router.delete('/pbx/:id',pbx.deleteById);
+router.put('/pbx/:hostname',pbx.updatepbx);
+router.delete('/pbx/:hostname',pbx.deletepbx);
 
 //contact
 router.get('/contact',contact.find);

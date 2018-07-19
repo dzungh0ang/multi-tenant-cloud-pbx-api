@@ -137,17 +137,17 @@ router.delete('/user-group/:id',groupRouter.deleteById);
 
 //customer
 router.get('/customer',customer.find);
-router.get('/customer/:id',customer.findOneById);
+router.get('/customer/:code',customer.findcustomer);
 router.post('/customer',customer.createOne);
-router.put('/customer/:id',customer.updateOneById);
-router.delete('/customer/:id',customer.deleteById);
+router.put('/customer/:code',customer.updatecustomer);
+router.delete('/customer/:code',customer.deletecustomer);
 
 //pbx-number
 router.get('/pbx-number',pbx_number.find);
 router.get('/pbx-number/:number',pbx_number.findpbxnumber);
 router.post('/pbx-number',pbx_number.createOne);
 router.put('/pbx-number/:number',pbx_number.updatepbxnumber);
-router.delete('/pbx-number/:id',pbx_number.deleteById);
+router.delete('/pbx-number/:number',pbx_number.deletepbxnumber);
 
 //pbx
 router.get('/pbx',pbx.find);

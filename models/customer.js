@@ -10,7 +10,6 @@ var schema = new mongoose.Schema({
     phoneNumber: { type: String, default: "" },
     email: { type: String, default: "" },
     contract: { type: Object, default: {} },
-    attributes: { type: Object, default: {} },
     note: { type: String, default: "" },
     attributes: { type: Object, default: {} },
     createdBy: { type: mongoose.Schema.Types.ObjectId, default:undefined, ref: MODEL_NAME.USER }

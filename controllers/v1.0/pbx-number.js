@@ -32,6 +32,7 @@ class Controller extends ModelController{
         ];
         this.updatebynumber = this.updatebynumber.bind(this);
         this.findbynumber = this.findbynumber.bind(this);
+        this.deletebynumber = this.deletebynumber.bind(this);
     }
     async updatebynumber(number,location,customer,dialPlan,note){
         let result = ERROR_CODE._403_FORBIDEN._106;
@@ -67,6 +68,13 @@ class Controller extends ModelController{
                     note: result.data.note
                 }
             }
+        }
+        return result;
+    }
+    async deletebynumber(number){
+        let result = ERROR_CODE._403_FORBIDEN._106;
+        if(number){
+            result = await this.deleteOne(number);
         }
         return result;
     }

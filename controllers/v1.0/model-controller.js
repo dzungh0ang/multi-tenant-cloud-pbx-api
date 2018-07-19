@@ -369,6 +369,39 @@ class ModelController{
 
         return result;
     }
+
+    //Delete one item
+    async deleteOne(filters){
+        let result = errorCodeHelper.getDefaultResult();
+        if(filters){
+            let options = {
+                
+            }
+            try{
+                let deletedItem = await this.Model.findOneAndRemove(filters,options);
+                
+                deletedItem = this.removeUnwantedProps(deletedItem);
+
+                if(deletedItem!=null){
+                    result.success = true;
+                    result.status = 200;
+                    result.data = deletedItem;
+                }else{
+                    result.success = false;
+                    result.error = ERROR_CODE._404_NOT_FOUND._116;
+                    result.status = result.error.status;
+                }
+            }catch(error){
+                result = errorCodeHelper.getErrorResult(error);
+            }
+        }else{
+            result.success = false;
+            result.error = ERROR_CODE._400_BAD_REQUEST._111;
+            result.status = result.error.status;
+        }
+
+        return result;
+    }
 }
 
 export default ModelController;

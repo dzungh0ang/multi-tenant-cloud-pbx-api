@@ -144,9 +144,9 @@ router.delete('/customer/:id',customer.deleteById);
 
 //pbx-number
 router.get('/pbx-number',pbx_number.find);
-router.get('/pbx-number/:id',pbx_number.findOneById);
+router.get('/pbx-number/:number',pbx_number.findpbxnumber);
 router.post('/pbx-number',pbx_number.createOne);
-router.put('/pbx-number/:id',pbx_number.updateOneById);
+router.put('/pbx-number/:number',pbx_number.updatepbxnumber);
 router.delete('/pbx-number/:id',pbx_number.deleteById);
 
 //pbx

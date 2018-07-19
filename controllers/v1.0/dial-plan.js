@@ -12,10 +12,24 @@ class Controller extends ModelController{
             "note"
         ]
         this.propertiesToPopulate = [
-            {
-                customer:"customer",
-                name:"createdBy"
-            }
+            
+                {
+                    name:"customer",
+                    properties: 
+                    [
+                        "name",
+                        "code"
+                    ],
+                },
+                {
+                    name:"createdBy",
+                    properties: 
+                    [
+                        "name",
+                        "username"
+                    ],
+                }
+            
         ];
     }
 }

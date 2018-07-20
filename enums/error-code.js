@@ -58,6 +58,36 @@ const LIST = {
             status: 500,
             detail: ""
         }
+    },
+    mysql:{
+        connection_failed:{
+            code:"400",
+            message:"Connection Failed!"
+        },
+        not_found:{
+            code:"200",
+            message:"Không tìm thấy thông tin!"
+        },
+        success:{
+            code:"0",
+            message:"Success!"
+        },
+        failed:{
+            code:"300",
+            message:"Failed!"
+        },
+        create_failed:{
+            code:"202",
+            message:"Tạo mới thất bại!"
+        },
+        update_failed:{
+            code:"203",
+            message:"Cập nhật thất bại!"
+        },
+        delete_failed:{
+            code:"204",
+            message:"Xóa thất bại!"
+        }
     }
 }
 

@@ -14,6 +14,7 @@ import pbx from './pbx';
 import contact from './contact';
 import dial_plan from './dial-plan';
 import autoCall from './auto-call';
+import sip from '../../controllers/v1.0/sip'
 
 
 var router = Router();
@@ -169,6 +170,13 @@ router.get('/dial-plan/:id',dial_plan.findOneById);
 router.post('/dial-plan',dial_plan.createOne);
 router.put('/dial-plan/:id',dial_plan.updateOneById);
 router.delete('/dial-plan/:id',dial_plan.deleteById);
+
+//sip
+router.get('/sip',sip.list);
+router.get('/sip/:username',sip.getOne);
+router.post('/sip',sip.create);
+router.put('/sip/:username',sip.update);
+router.delete('/sip/:username',sip.delete);
 
 router.get('/auto-call',autoCall.find);
 

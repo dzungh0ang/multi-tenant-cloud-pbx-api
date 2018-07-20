@@ -12,6 +12,12 @@ const config = {
         port: 8021,
         username: "",
         secret: "1H4dsUb"
+    },
+    mysql:{
+        host:"localhost",
+        user:"root",
+        password:"",
+        database:"multi_tenants_cloud_pbx"
     }
 }
 

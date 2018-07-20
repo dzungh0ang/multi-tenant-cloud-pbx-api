@@ -26,6 +26,8 @@
     "modesl": "^1.2.0",
     "mongoose": "^5.0.2",
     "morgan": "^1.9.0",
+    "mysql": "^2.16.0",
+    "request": "^2.87.0",
     "socket.io": "^2.1.0"
   }
 }

@@ -88,6 +88,12 @@ const LIST = {
             code:"204",
             message:"Xóa thất bại!"
         }
+    },
+    other:{
+        success:{
+            code:"200",
+            message:"Success"
+        }
     }
 }
 

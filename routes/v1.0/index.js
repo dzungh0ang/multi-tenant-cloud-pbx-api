@@ -15,6 +15,7 @@ import contact from './contact';
 import dial_plan from './dial-plan';
 import autoCall from './auto-call';
 import sip from '../../controllers/v1.0/sip'
+import queue from '../../controllers/v1.0/queue'
 
 
 var router = Router();
@@ -177,6 +178,13 @@ router.get('/sip/:username',sip.getOne);
 router.post('/sip',sip.create);
 router.put('/sip/:username',sip.update);
 router.delete('/sip/:username',sip.delete);
+
+//queue
+router.get('/queue',queue.list);
+router.get('/queue/:name',queue.getOne);
+router.post('/queue',queue.create);
+router.put('/queue/:name',queue.update);
+router.delete('/queue/:name',queue.delete);
 
 router.get('/auto-call',autoCall.find);
 
